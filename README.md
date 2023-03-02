@@ -35,7 +35,7 @@ In the following you will review the prerequits that you must comply before even
 ### Prerequisites
 
 Please, be absolutly sure that you have:
-*   A Linux machine with at least 8gb RAM and 5gb of space in disc
+*   A Linux machine with at least 8gb RAM and 5gb of space in disc, and AVX instruction specification.
 *   Have a user with root accesses
 *   On it should be installed:
     -   Docker _OPTIONAL 20.10.12_
@@ -82,7 +82,7 @@ The API request needs to be structure as:
     curl -F threshold=<LEVEL_ON_DECIMAL_PERC> -F <ADDRESS_OF_THE_IMAGE_TO_BE_SENT> http://0.0.0.0:5000/<ENDPOINT>
     ```
 
-There primarly 2 endpoints: object-count and object-found. You can call them by:
+There primarly 2 endpoints: object-count and object-found. You can call them by: \
     ```bash
     curl -F "threshold=0.9" -F "file=@resources/images/boy.jpg" http://0.0.0.0:5000/object-count
     curl -F "threshold=0.9" -F "file=@resources/images/boy.jpg" http://0.0.0.0:5000/object-found
