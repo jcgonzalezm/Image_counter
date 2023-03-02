@@ -1,4 +1,4 @@
-# Machine Learning & Hexagonal Architecture - Jose Carlos Gonzalez
+# Machine Learning & Hexagonal Architecture
 
 The main treat of the project its the implementation of an Hexagonal Architecture in a ML based system, showing the perks of it in order to treat the ML layer as the 'center' of the several plugins.
 
@@ -64,7 +64,9 @@ Please follow this steps in order for setting up your application:
     source ./_containers/build_containers.sh
     ```
 
-   The terminal will start printing a bunch of stuff, please ignore them. At the end you should see something as: `---------------CONTAINERS UP AND RUNNING--------------`
+   The terminal will start printing a bunch of stuff, please ignore them. At the end you should see something as: \
+   `---------------CONTAINERS UP AND RUNNING--------------`
+   If any problem has araised, a notification below the previous message will be shown.
 
 6. Now as a last step. Please execute:
     ```bash
@@ -76,14 +78,17 @@ Please follow this steps in order for setting up your application:
 
 From the same folder you execute the previous steps, you can send images to your app in order to receive information of the objectes found on it.
 The API request needs to be structure as:
-    `curl -F threshold=<LEVEL_ON_DECIMAL_PERC> -F <ADDRESS_OF_THE_IMAGE_TO_BE_SENT> http://0.0.0.0:5000/<ENDPOINT>`
+    ```bash
+    curl -F threshold=<LEVEL_ON_DECIMAL_PERC> -F <ADDRESS_OF_THE_IMAGE_TO_BE_SENT> http://0.0.0.0:5000/<ENDPOINT>
+    ```
 
 There primarly 2 endpoints: object-count and object-found. You can call them by:
-    `curl -F "threshold=0.9" -F "file=@resources/images/boy.jpg" http://0.0.0.0:5000/object-count`
-    and
-    `curl -F "threshold=0.9" -F "file=@resources/images/boy.jpg" http://0.0.0.0:5000/object-found`
+    ```bash
+    curl -F "threshold=0.9" -F "file=@resources/images/boy.jpg" http://0.0.0.0:5000/object-count
+    curl -F "threshold=0.9" -F "file=@resources/images/boy.jpg" http://0.0.0.0:5000/object-found
+    ```
 
-## :open_book: Documentation and pytest
+## :open_book: Documentation and simple test
 
 Additional documentation its available in: `$(pwd)/documentation/`
 You can execute an overall testing by `python test.py` on project root folder.
