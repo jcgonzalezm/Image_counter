@@ -21,4 +21,4 @@ docker run \
     -e MODEL_NAME=$model_name \
     -e OMP_NUM_THREADS=$num_physical_cores \
     -e TENSORFLOW_INTRA_OP_PARALLELISM=$num_physical_cores \
-    intel/intel-optimized-tensorflow-serving:2.3.0
+    intel/intel-optimized-tensorflow-serving:latest
