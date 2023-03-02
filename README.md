@@ -78,15 +78,14 @@ Please follow this steps in order for setting up your application:
 
 From the same folder you execute the previous steps, you can send images to your app in order to receive information of the objectes found on it.
 The API request needs to be structure as:
-    ```bash
-    curl -F threshold=<LEVEL_ON_DECIMAL_PERC> -F <ADDRESS_OF_THE_IMAGE_TO_BE_SENT> http://0.0.0.0:5000/<ENDPOINT>
-    ```
 
-There primarly 2 endpoints: object-count and object-found. You can call them by: \
-    ```bash
+    curl -F threshold=<LEVEL_ON_DECIMAL_PERC> -F <ADDRESS_OF_THE_IMAGE_TO_BE_SENT> http://0.0.0.0:5000/<ENDPOINT>
+    
+There primarly 2 endpoints: object-count and object-found. You can call them by:
+
     curl -F "threshold=0.9" -F "file=@resources/images/boy.jpg" http://0.0.0.0:5000/object-count
     curl -F "threshold=0.9" -F "file=@resources/images/boy.jpg" http://0.0.0.0:5000/object-found
-    ```
+
 
 ## :open_book: Documentation and simple test
 
